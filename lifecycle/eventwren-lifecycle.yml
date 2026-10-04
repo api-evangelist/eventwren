@@ -1,0 +1,17 @@
+generated: '2026-09-26'
+method: searched
+source: https://eventwren.com/openapi.yml ; https://eventwren.com/developers/ ; https://eventwren.com/policy/
+versioning:
+  scheme: URL path (/v1) plus info.version
+  current: 0.1.0
+  policy: null
+  note: No published versioning policy. The moderation policy is versioned separately (policy_version; /policy.json
+    "the policy for this site, versioned").
+deprecation:
+  policy: null
+  headers: null
+  note: No deprecation policy, Sunset or Deprecation header documented.
+sla: null
+status_page: null
+status_page_note: https://eventwren.com/status/ returned 404 (2026-09-26); no status page found.
+deprecated_operations: []

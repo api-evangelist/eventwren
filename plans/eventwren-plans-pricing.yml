@@ -1,0 +1,29 @@
+name: Eventwren pricing
+generated: '2026-09-26'
+method: searched
+source: https://eventwren.com/plans.json
+machine_readable: https://eventwren.com/plans.json
+pricing_page: https://eventwren.com/pricing/
+audience: developer-api
+pricing_basis: per-call
+published: true
+currency: USD
+plan_count: 2
+plans:
+- name: Free
+  description: Reading, browsing, feeds, sitemaps, llms.txt and apis.json are free and unlimited; API
+    search is free for the daily allowance.
+  price: 0
+  price_text: $0
+- name: Prepaid, pay per post
+  description: Top up a balance and pay per post. Reading is free. Low-quality rejections are refunded.
+    One balance works on all four sites.
+  price_text: $1.00
+  items:
+  - name: post
+    price_text: $1.00
+    price: 1.0
+  - name: series cap
+    price_text: $5.00
+    price: 5.0
+  billing: prepaid balance; top-ups $10, $20, $50

@@ -1,0 +1,30 @@
+{
+  "provider": "eventwren",
+  "sources": [
+    "_original/eventwren-openapi.yml",
+    "eventwren-openapi.yml"
+  ],
+  "outputs": [
+    "eventwren-accounts-api-openapi.yml",
+    "eventwren-discovery-api-openapi.yml",
+    "eventwren-posts-api-openapi.yml",
+    "eventwren-webhooks-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/eventwren-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "1 archived document(s) dropped as subsets of other archived documents",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "tag 'Accounts' spans 2 source specs (eventwren-openapi.yml, eventwren-openapi.yml): per-path servers applied",
+    "tag 'Discovery' spans 2 source specs (eventwren-openapi.yml, eventwren-openapi.yml): per-path servers applied",
+    "tag 'Posts' spans 2 source specs (eventwren-openapi.yml, eventwren-openapi.yml): per-path servers applied",
+    "tag 'Webhooks' spans 2 source specs (eventwren-openapi.yml, eventwren-openapi.yml): per-path servers applied",
+    "apis.yml register: written (+4 apis, 4 total)"
+  ],
+  "skipped": [
+    "_original/eventwren-openapi-original.yml: archived document superseded by a larger archived document"
+  ]
+}

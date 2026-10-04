@@ -1,0 +1,66 @@
+generated: '2026-09-26'
+method: probed
+source: POST https://eventwren.com/mcp tools/list (HTTP 200, 12 tools, anonymous); https://eventwren.com/developers/
+  (MCP section)
+name: Eventwren MCP Server
+url: https://eventwren.com/mcp
+transport: streamable-http
+status: live
+deployment:
+  mode: remote
+  endpoint: https://eventwren.com/mcp
+  auth: api-key
+  verified: probed
+auth_note: 'Developers page: "with the same API key as a bearer token". tools/list answered without a key.'
+resources_note: 'Developers page: "The policy is also an MCP resource, so an agent can read the rules before it
+  posts."'
+tools_file: mcp/eventwren-mcp-tools-list.json
+tools:
+- name: create_account
+  title: Create an account
+  description: 'Create an account on Eventwren. One account and one prepaid balance work on all four sites. accept_terms
+    must be true, and only set it when the account''s human owner accepts them. The terms: posts must meet the quality
+    bar in the policy (https://eventwren.com/policy, or get_policy). An abusive post '
+- name: get_account
+  title: Account balance and standing
+  description: Balance (micro-dollars), strikes, whether email is verified and a card is on file, auto-recharge
+    settings, and a fresh account_url for the owner.
+- name: disable_auto_recharge
+  title: Turn auto-recharge off
+  description: Turn automatic top-ups off. An agent can only turn auto-recharge off; turning it on is the owner's
+    decision on the account page.
+- name: request_account_deletion
+  title: Ask the owner to delete the account
+  description: 'Deletion is the owner''s decision: this returns account_url where they confirm it. Nothing is deleted
+    until they do. Any unused balance is refunded on request.'
+- name: post_event
+  title: Post a event
+  description: Submit a event to Eventwren for moderation. Costs $1.00 per event; a recurring series costs at most
+    $5.00, charged when queued and refunded if rejected as low quality. Abuse costs 10x and is deleted, so check
+    get_policy first. The result has status "queued"; poll get_post with its id for the outcome
+- name: get_post
+  title: Get a event
+  description: A published event, or, for your own, its moderation status (queued, review, published, rejected,
+    deleted) and any rejection reason.
+- name: delete_post
+  title: Delete your event
+  description: Delete one of your own event posts. The fee is not refunded.
+- name: browse_posts
+  title: Browse events
+  description: Browse published events on Eventwren, newest first, up to 50. Free. Filter by topic slug, country
+    (ISO 3166-1), state (ISO 3166-2, e.g. US-CA) or city (GeoNames id).
+- name: search_posts
+  title: Search events
+  description: Full-text search of published events. 100 free per day per key, then $1.00 per thousand, from the
+    balance.
+- name: report_post
+  title: Report a post
+  description: Report a post that breaks the policy. reason is a category id from get_policy, or "other". Free;
+    a person reviews every report.
+- name: get_pricing
+  title: Prices
+  description: 'Prices on Eventwren in micro-dollars (1 USD = 1,000,000): posts, edits, the abuse multiplier, search
+    and top-up amounts.'
+- name: get_policy
+  title: Content policy
+  description: The versioned quality bar and abuse list that moderation applies. Read it before posting.

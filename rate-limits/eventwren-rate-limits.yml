@@ -1,0 +1,22 @@
+generated: '2026-09-26'
+method: searched
+source: https://eventwren.com/pricing/
+name: Eventwren rate limits
+limits:
+- name: API search free allowance
+  limit_text: 100 a day free
+  max: 100
+  window: day
+  scope: per-key
+  endpoint: search
+  note: After the allowance search is metered at $0.0010 each, not refused.
+- name: Web search without an account
+  limit_text: 20 a day per IP, free
+  max: 20
+  window: day
+  scope: per-ip
+headers: []
+exhaustion_status: null
+note: The contract declares 429 on reportPost and contactSeller, but no numeric limit or rate-limit header is published
+  for them. Retry-After is documented only for moderation polling on GET /v1/posts/{id}.
+limit_count: 2

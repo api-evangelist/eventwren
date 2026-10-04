@@ -1,0 +1,12 @@
+generated: '2026-09-26'
+method: generated
+source: Packaged Agent Skills generated from openapi/eventwren-openapi.yml and the developers page flow at https://eventwren.com/developers/.
+skills:
+  - file: eventwren-publish-an-event.md
+    name: publish-an-event
+    api: openapi/eventwren-openapi.yml
+    operations: [createAccount, getAccount, createPost, getPost]
+  - file: eventwren-find-events.md
+    name: find-events
+    api: openapi/eventwren-openapi.yml
+    operations: [listPosts, search, getPost]

@@ -1,0 +1,19 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements to the Eventwren API
+  version: 1.0.0
+extends: openapi/eventwren-openapi.yml
+x-generated: '2026-09-26'
+x-method: generated
+actions:
+- target: $.info
+  update:
+    x-apievangelist-profile-host: https://eventwren.com
+    x-apievangelist-note: One contract serves four sites; this profile covers the events site at eventwren.com. POST /v1/posts takes EventInput
+      here, and POST /v1/relay is hagglebee.com only.
+- target: $.paths['/v1/relay'].post
+  update:
+    x-apievangelist-site-scope: hagglebee.com
+- target: $.info
+  update:
+    x-mcp-server: https://eventwren.com/mcp

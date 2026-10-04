@@ -1,0 +1,177 @@
+{
+  "@context": {
+    "@vocab": "https://eventwren.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "eventwren": "https://eventwren.com/schema#",
+    "Error": "eventwren:Error",
+    "error": {
+      "@id": "eventwren:error"
+    },
+    "Account": "eventwren:Account",
+    "account_id": {
+      "@id": "eventwren:account_id",
+      "@type": "xsd:string"
+    },
+    "handle": {
+      "@id": "eventwren:handle",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "eventwren:status",
+      "@type": "xsd:string"
+    },
+    "balance": {
+      "@id": "eventwren:balance",
+      "@type": "xsd:integer"
+    },
+    "strikes": {
+      "@id": "eventwren:strikes",
+      "@type": "xsd:integer"
+    },
+    "card_on_file": {
+      "@id": "eventwren:card_on_file",
+      "@type": "xsd:boolean"
+    },
+    "email_verified": {
+      "@id": "eventwren:email_verified",
+      "@type": "xsd:boolean"
+    },
+    "auto_recharge": {
+      "@id": "eventwren:auto_recharge"
+    },
+    "account_url": {
+      "@id": "eventwren:account_url",
+      "@type": "@id"
+    },
+    "Location": "eventwren:Location",
+    "country": {
+      "@id": "eventwren:country",
+      "@type": "xsd:string"
+    },
+    "state": {
+      "@id": "eventwren:state",
+      "@type": "xsd:string"
+    },
+    "city": {
+      "@id": "eventwren:city"
+    },
+    "MessageInput": "eventwren:MessageInput",
+    "text": {
+      "@id": "eventwren:text",
+      "@type": "xsd:string"
+    },
+    "topics": {
+      "@id": "eventwren:topics",
+      "@type": "@id"
+    },
+    "location": {
+      "@id": "eventwren:location",
+      "@type": "@id"
+    },
+    "StoryInput": "eventwren:StoryInput",
+    "title": {
+      "@id": "eventwren:title",
+      "@type": "xsd:string"
+    },
+    "body": {
+      "@id": "eventwren:body",
+      "@type": "xsd:string"
+    },
+    "ClassifiedInput": "eventwren:ClassifiedInput",
+    "category": {
+      "@id": "eventwren:category",
+      "@type": "xsd:string"
+    },
+    "price": {
+      "@id": "eventwren:price"
+    },
+    "condition": {
+      "@id": "eventwren:condition",
+      "@type": "xsd:string"
+    },
+    "EventInput": "eventwren:EventInput",
+    "timezone": {
+      "@id": "eventwren:timezone",
+      "@type": "xsd:string"
+    },
+    "starts_at": {
+      "@id": "eventwren:starts_at",
+      "@type": "xsd:dateTime"
+    },
+    "ends_at": {
+      "@id": "eventwren:ends_at",
+      "@type": "xsd:dateTime"
+    },
+    "occurrences": {
+      "@id": "eventwren:occurrences",
+      "@container": "@list"
+    },
+    "online_url": {
+      "@id": "eventwren:online_url",
+      "@type": "@id"
+    },
+    "Post": "eventwren:Post",
+    "id": {
+      "@id": "eventwren:id",
+      "@type": "xsd:string"
+    },
+    "site": {
+      "@id": "eventwren:site",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "eventwren:url",
+      "@type": "@id"
+    },
+    "content_trust": {
+      "@id": "eventwren:content_trust",
+      "@type": "xsd:string"
+    },
+    "license": {
+      "@id": "eventwren:license"
+    },
+    "author": {
+      "@id": "eventwren:author"
+    },
+    "published_at": {
+      "@id": "eventwren:published_at",
+      "@type": "xsd:dateTime"
+    },
+    "expires_at": {
+      "@id": "eventwren:expires_at",
+      "@type": "xsd:dateTime"
+    },
+    "policy_version": {
+      "@id": "eventwren:policy_version",
+      "@type": "xsd:string"
+    },
+    "OwnPost": "eventwren:OwnPost",
+    "submitted_at": {
+      "@id": "eventwren:submitted_at",
+      "@type": "xsd:dateTime"
+    },
+    "post": {
+      "@id": "eventwren:post",
+      "@type": "@id"
+    },
+    "rejection": {
+      "@id": "eventwren:rejection"
+    },
+    "note": {
+      "@id": "eventwren:note",
+      "@type": "xsd:string"
+    },
+    "moderation": {
+      "@id": "eventwren:moderation"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Eventwren API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Eventwren's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-26) from openapi/eventwren-openapi.yml.",
+  "dcterms:created": "2026-09-26",
+  "dcterms:source": [
+    "openapi/eventwren-openapi.yml"
+  ]
+}

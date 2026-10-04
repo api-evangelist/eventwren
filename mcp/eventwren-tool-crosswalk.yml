@@ -1,0 +1,90 @@
+generated: '2026-09-26'
+method: derived
+source: Live MCP tools/list at https://eventwren.com/mcp bound by name and semantics to operationIds in openapi/eventwren-openapi.yml
+  (same codebase, same operations per the developers page).
+surfaces:
+  openapi: openapi/eventwren-openapi.yml
+  mcp: https://eventwren.com/mcp
+  mcp_schema: public (tools/list answered anonymously)
+crosswalk:
+- tool: create_account
+  category: accounts
+  rest:
+  - createAccount
+  binding: '1:1'
+  confidence: high
+- tool: get_account
+  category: accounts
+  rest:
+  - getAccount
+  binding: '1:1'
+  confidence: high
+- tool: disable_auto_recharge
+  category: accounts
+  rest:
+  - updateAccount
+  binding: '1:1'
+  confidence: high
+- tool: request_account_deletion
+  category: accounts
+  rest:
+  - deleteAccount
+  binding: '1:1'
+  confidence: high
+- tool: post_event
+  category: posts
+  rest:
+  - createPost
+  binding: '1:1'
+  confidence: high
+- tool: get_post
+  category: posts
+  rest:
+  - getPost
+  binding: '1:1'
+  confidence: high
+- tool: delete_post
+  category: posts
+  rest:
+  - deletePost
+  binding: '1:1'
+  confidence: high
+- tool: browse_posts
+  category: posts
+  rest:
+  - listPosts
+  binding: '1:1'
+  confidence: high
+- tool: search_posts
+  category: posts
+  rest:
+  - search
+  binding: '1:1'
+  confidence: high
+- tool: report_post
+  category: posts
+  rest:
+  - reportPost
+  binding: '1:1'
+  confidence: high
+- tool: get_pricing
+  category: discovery
+  rest:
+  - getPricing
+  binding: '1:1'
+  confidence: high
+- tool: get_policy
+  category: discovery
+  rest:
+  - getPolicy
+  binding: '1:1'
+  confidence: high
+mcp_only: []
+rest_only:
+- operationId: contactSeller
+  reason: POST /v1/relay applies to hagglebee.com classifieds only; not exposed on the eventwren MCP server
+coverage:
+  tools: 12
+  bound: 12
+  rest_operations: 13
+  rest_only: 1

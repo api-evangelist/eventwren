@@ -1,0 +1,54 @@
+generated: '2026-09-26'
+method: searched
+source: https://eventwren.com/privacy/ ; https://eventwren.com/terms/ ; https://eventwren.com/policy/
+signals:
+  subprocessors:
+    url: https://eventwren.com/privacy/
+    evidence:
+    - source: https://eventwren.com/privacy/
+      http_status: 200
+      fetched: '2026-09-26'
+      quote: 'We share only what each service needs with the processors that run the sites: Stripe (payments), Amazon
+        Web Services (hosting, storage, email delivery).'
+    note: Processors named with purpose inside the privacy policy; not a separate dated subprocessor list. The privacy
+      policy is marked "Draft — pending legal review."
+  data_subject_request:
+    url: https://eventwren.com/privacy/
+    channel: info@apievangelist.com
+    rights_named:
+    - access (copy)
+    - correction
+    - deletion
+    evidence:
+    - source: https://eventwren.com/privacy/
+      http_status: 200
+      fetched: '2026-09-26'
+      quote: You can ask us for a copy of your data, to correct it, or to delete it by emailing info@apievangelist.com
+        .
+  notice_and_action:
+    url: https://eventwren.com/policy/
+    mechanisms:
+    - POST /v1/reports (reportPost, anyone, with or without a key)
+    - '"Report this post" link and report form'
+    - DMCA notices to dmca@eventwren.com
+    - appeals within 30 days
+    evidence:
+    - source: https://eventwren.com/policy/
+      http_status: 200
+      fetched: '2026-09-26'
+      quote: To report a published post, use the “Report this post” link on it or the report form .
+    - source: https://eventwren.com/terms/
+      http_status: 200
+      fetched: '2026-09-26'
+      quote: You can appeal any rejection, penalty or strike by emailing info@apievangelist.com with the post id
+        within 30 days.
+  ai_transparency:
+    url: https://eventwren.com/policy/
+    evidence:
+    - source: https://eventwren.com/policy/
+      http_status: 200
+      fetched: '2026-09-26'
+      quote: 'Every post is checked before it is published: first by fixed rules, then by a moderation model that
+        reads this exact policy, and by a person when the model is unsure.'
+    note: Discloses automated (model) moderation with human review; the model is named in apis.yml description,
+      not quoted here.
