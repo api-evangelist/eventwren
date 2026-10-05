@@ -1,0 +1,81 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://eventwren.com/",
+      "service-desc": [
+        {
+          "href": "https://eventwren.com/openapi.yml",
+          "type": "application/yaml"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://eventwren.com/developers/",
+          "type": "text/html"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://eventwren.com/apis.json",
+          "type": "application/json"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://eventwren.com/status/",
+          "type": "text/html"
+        },
+        {
+          "href": "https://eventwren.com/v1/status",
+          "type": "application/json"
+        }
+      ],
+      "item": [
+        {
+          "href": "https://eventwren.com/v1",
+          "title": "Eventwren API"
+        },
+        {
+          "href": "https://eventwren.com/mcp",
+          "title": "Eventwren MCP server"
+        }
+      ]
+    },
+    {
+      "anchor": "https://eventwren.com/v1",
+      "service-desc": [
+        {
+          "href": "https://eventwren.com/openapi.yml",
+          "type": "application/yaml"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://eventwren.com/developers/",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://eventwren.com/v1/status",
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "anchor": "https://eventwren.com/mcp",
+      "service-desc": [
+        {
+          "href": "https://eventwren.com/.well-known/mcp/server-card.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://eventwren.com/developers/",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}

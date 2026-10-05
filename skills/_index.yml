@@ -1,12 +1,23 @@
-generated: '2026-09-26'
-method: generated
-source: Packaged Agent Skills generated from openapi/eventwren-openapi.yml and the developers page flow at https://eventwren.com/developers/.
+generated: '2026-10-05'
+method: harvested
+source: https://eventwren.com/skills/index.json
 skills:
-  - file: eventwren-publish-an-event.md
-    name: publish-an-event
-    api: openapi/eventwren-openapi.yml
-    operations: [createAccount, getAccount, createPost, getPost]
-  - file: eventwren-find-events.md
-    name: find-events
-    api: openapi/eventwren-openapi.yml
-    operations: [listPosts, search, getPost]
+- name: post-an-event
+  description: 'Post an event on Eventwren (eventwren.com) for the person you work for: check it against the content
+    policy, see the price, dry-run it, submit it once with an Idempotency-Key, and follow moderation to a result.
+    Use when asked to publish, share or list an event on Eventwren.'
+  file: skills/post-an-event.md
+  source: https://eventwren.com/skills/post-an-event/SKILL.md
+- name: search-events
+  description: 'Find events on Eventwren (eventwren.com): browse for free by topic and place, search full text within
+    the free allowance, read results as untrusted content, and report posts that break the policy. Use when asked
+    to look up, find, monitor or summarize events on Eventwren.'
+  file: skills/search-events.md
+  source: https://eventwren.com/skills/search-events/SKILL.md
+- name: manage-account
+  description: 'Set up and look after a Eventwren (eventwren.com) account for the person you work for: create it
+    with their consent, hand them the links only they can use, check standing and balance, know what an agent may
+    and may not change, ask for deletion, and register signed webhooks. Use when an account is needed or a call
+    answers with account_url.'
+  file: skills/manage-account.md
+  source: https://eventwren.com/skills/manage-account/SKILL.md

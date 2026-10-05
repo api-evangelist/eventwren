@@ -1,22 +1,68 @@
-generated: '2026-09-26'
-method: searched
-source: https://eventwren.com/pricing/
-name: Eventwren rate limits
+generated: '2026-10-05'
+method: harvested
+source: https://eventwren.com/rate-limits.json
+name: eventwren.com rate limits
+limit_count: 8
 limits:
-- name: API search free allowance
-  limit_text: 100 a day free
+- name: search-per-key
   max: 100
   window: day
-  scope: per-key
-  endpoint: search
-  note: After the allowance search is metered at $0.0010 each, not refused.
-- name: Web search without an account
-  limit_text: 20 a day per IP, free
+  scope: api_key
+  endpoint: GET /v1/search
+  headers:
+  - RateLimit
+  - RateLimit-Policy
+  price_after: $0.0010
+- name: search-without-key
   max: 20
   window: day
-  scope: per-ip
-headers: []
-exhaustion_status: null
-note: The contract declares 429 on reportPost and contactSeller, but no numeric limit or rate-limit header is published
-  for them. Retry-After is documented only for moderation polling on GET /v1/posts/{id}.
-limit_count: 2
+  scope: ip
+  endpoint: GET /v1/search
+  headers:
+  - RateLimit
+  - RateLimit-Policy
+  - Retry-After
+- name: reports
+  max: 20
+  window: day
+  scope: ip
+  endpoint: POST /v1/reports
+  headers: []
+- name: platform-throttle
+  max: 100
+  window: second
+  scope: platform
+  endpoint: '* /v1/*'
+  headers: []
+- name: webhooks-per-account
+  max: 5
+  window: null
+  scope: account
+  endpoint: POST /v1/webhooks
+  headers: []
+- name: api-keys-per-account
+  max: 20
+  window: null
+  scope: account
+  endpoint: POST /v1/manage/keys
+  headers: []
+- name: idempotency-key-retention
+  max: null
+  window: day
+  scope: idempotency_key
+  endpoint: POST /v1/posts
+  headers:
+  - Idempotent-Replayed
+- name: posting
+  max: null
+  window: null
+  scope: account
+  endpoint: POST /v1/posts
+  headers: []
+headers:
+- Idempotent-Replayed
+- RateLimit
+- RateLimit-Policy
+- Retry-After
+signaling:
+  status_on_exhaustion: 429
