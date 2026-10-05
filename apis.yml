@@ -138,6 +138,12 @@ common:
   url: https://eventwren.com/governance/spectral.yml
 - type: Overlay
   url: https://eventwren.com/overlays/site.yml
+- type: OAuthScopes
+  url: https://eventwren.com/oauth/scopes/
+- type: OAuth
+  url: https://eventwren.com/.well-known/oauth-authorization-server
+- type: ProtectedResourceMetadata
+  url: https://eventwren.com/.well-known/oauth-protected-resource/mcp
 apis:
 - aid: eventwren:eventwren-accounts-api
   name: Eventwren Accounts API

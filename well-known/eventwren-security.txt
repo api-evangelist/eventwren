@@ -2,7 +2,7 @@
 # The disclosure policy is at the Policy URL. There is no bug bounty.
 Contact: mailto:security@eventwren.com
 Contact: mailto:info@apievangelist.com
-Expires: 2027-10-05T21:22:23Z
+Expires: 2027-10-05T23:33:08Z
 Preferred-Languages: en
 Canonical: https://eventwren.com/.well-known/security.txt
 Policy: https://eventwren.com/security/
