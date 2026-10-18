@@ -158,6 +158,8 @@ apis:
   - Onboarding
   tags_raw:
   - Accounts
+  - Agents
+  - Onboarding
   properties:
   - type: OpenAPI
     url: openapi/eventwren-accounts-api-openapi.yml
@@ -192,6 +194,11 @@ apis:
     decide before it posts.
   humanURL: https://eventwren.com/developers/
   tags:
+  - Discovery
+  - Search
+  - Event
+  - Event Listings
+  tags_raw:
   - Discovery
   - Search
   - Events
@@ -232,6 +239,12 @@ apis:
   tags:
   - Posts
   - Publishing
+  - Event
+  - Event Listings
+  - Calendar
+  tags_raw:
+  - Posts
+  - Publishing
   - Events
   - Event Listings
   - Calendar
@@ -269,9 +282,10 @@ apis:
   humanURL: https://eventwren.com/developers/
   tags:
   - Webhook
-  - Notifications
+  - Notification
   tags_raw:
   - Webhooks
+  - Notifications
   properties:
   - type: OpenAPI
     url: openapi/eventwren-webhooks-api-openapi.yml
@@ -305,6 +319,8 @@ apis:
     the code for scoped tokens. For the client and the human, not agent tools.
   humanURL: https://eventwren.com/developers/
   tags:
+  - Authentication
+  tags_raw:
   - OAuth
   properties:
   - type: OpenAPI
